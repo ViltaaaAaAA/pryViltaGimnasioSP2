@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             txtxnombre = new TextBox();
-            textBox2 = new TextBox();
-            cb = new CheckBox();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            checkBox2 = new CheckBox();
+            chkestudiante = new CheckBox();
+            cboplan = new ComboBox();
             txtedad = new TextBox();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            comboBox3 = new ComboBox();
-            button1 = new Button();
-            button2 = new Button();
             lblnombre = new Label();
             grpdatospersonales = new GroupBox();
             lbledad = new Label();
             groupBox1 = new GroupBox();
-            lblplan = new Label();
-            comboBox4 = new ComboBox();
-            lblmeses = new Label();
-            textBox1 = new TextBox();
+            chkcasillero = new CheckBox();
+            txtmeses = new TextBox();
+            cboturno = new ComboBox();
             label1 = new Label();
-            comboBox5 = new ComboBox();
+            lblmeses = new Label();
+            lblplan = new Label();
+            groupBox2 = new GroupBox();
+            rbtefectivo = new RadioButton();
+            rbttarjeta = new RadioButton();
+            cbocuotas = new ComboBox();
+            label2 = new Label();
+            btmcalcular = new Button();
+            btmLimpiar = new Button();
             grpdatospersonales.SuspendLayout();
             groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // txtxnombre
@@ -61,48 +61,25 @@
             txtxnombre.Size = new Size(179, 23);
             txtxnombre.TabIndex = 0;
             // 
-            // textBox2
+            // chkestudiante
             // 
-            textBox2.Location = new Point(673, 346);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 1;
+            chkestudiante.AutoSize = true;
+            chkestudiante.Location = new Point(18, 64);
+            chkestudiante.Name = "chkestudiante";
+            chkestudiante.Size = new Size(81, 19);
+            chkestudiante.TabIndex = 2;
+            chkestudiante.Text = "Estudiante";
+            chkestudiante.UseVisualStyleBackColor = true;
             // 
-            // cb
+            // cboplan
             // 
-            cb.AutoSize = true;
-            cb.Location = new Point(18, 64);
-            cb.Name = "cb";
-            cb.Size = new Size(81, 19);
-            cb.TabIndex = 2;
-            cb.Text = "Estudiante";
-            cb.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(521, 366);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(98, 23);
-            comboBox1.TabIndex = 3;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(54, 21);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 4;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(99, 386);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(82, 19);
-            checkBox2.TabIndex = 5;
-            checkBox2.Text = "checkBox2";
-            checkBox2.UseVisualStyleBackColor = true;
+            cboplan.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboplan.FormattingEnabled = true;
+            cboplan.Items.AddRange(new object[] { "Musculacion", "Funcional", "Natacion" });
+            cboplan.Location = new Point(54, 21);
+            cboplan.Name = "cboplan";
+            cboplan.Size = new Size(121, 23);
+            cboplan.TabIndex = 4;
             // 
             // txtedad
             // 
@@ -110,54 +87,6 @@
             txtedad.Name = "txtedad";
             txtedad.Size = new Size(52, 23);
             txtedad.TabIndex = 6;
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(649, 210);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(94, 19);
-            radioButton1.TabIndex = 7;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "radioButton1";
-            radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(637, 246);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(94, 19);
-            radioButton2.TabIndex = 8;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "radioButton2";
-            radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(622, 415);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(121, 23);
-            comboBox3.TabIndex = 9;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(475, 248);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 10;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(698, 151);
-            button2.Name = "button2";
-            button2.Size = new Size(65, 31);
-            button2.TabIndex = 11;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
             // 
             // lblnombre
             // 
@@ -173,11 +102,11 @@
             grpdatospersonales.Controls.Add(lbledad);
             grpdatospersonales.Controls.Add(lblnombre);
             grpdatospersonales.Controls.Add(txtxnombre);
-            grpdatospersonales.Controls.Add(cb);
+            grpdatospersonales.Controls.Add(chkestudiante);
             grpdatospersonales.Controls.Add(txtedad);
             grpdatospersonales.Location = new Point(24, 12);
             grpdatospersonales.Name = "grpdatospersonales";
-            grpdatospersonales.Size = new Size(546, 100);
+            grpdatospersonales.Size = new Size(465, 100);
             grpdatospersonales.TabIndex = 13;
             grpdatospersonales.TabStop = false;
             grpdatospersonales.Text = "Datos Personales";
@@ -193,51 +122,46 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(comboBox5);
+            groupBox1.Controls.Add(chkcasillero);
+            groupBox1.Controls.Add(txtmeses);
+            groupBox1.Controls.Add(cboturno);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(lblmeses);
             groupBox1.Controls.Add(lblplan);
-            groupBox1.Controls.Add(comboBox2);
+            groupBox1.Controls.Add(cboplan);
             groupBox1.Location = new Point(24, 129);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(546, 100);
+            groupBox1.Size = new Size(465, 100);
             groupBox1.TabIndex = 14;
             groupBox1.TabStop = false;
             groupBox1.Text = "Plan ";
             // 
-            // lblplan
+            // chkcasillero
             // 
-            lblplan.AutoSize = true;
-            lblplan.Location = new Point(18, 24);
-            lblplan.Name = "lblplan";
-            lblplan.Size = new Size(30, 15);
-            lblplan.TabIndex = 14;
-            lblplan.Text = "Plan";
+            chkcasillero.AutoSize = true;
+            chkcasillero.Location = new Point(258, 60);
+            chkcasillero.Name = "chkcasillero";
+            chkcasillero.Size = new Size(115, 19);
+            chkcasillero.TabIndex = 14;
+            chkcasillero.Text = "Casillero ($3.000)";
+            chkcasillero.UseVisualStyleBackColor = true;
             // 
-            // comboBox4
+            // txtmeses
             // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(652, 302);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(121, 23);
-            comboBox4.TabIndex = 15;
+            txtmeses.Location = new Point(54, 56);
+            txtmeses.Name = "txtmeses";
+            txtmeses.Size = new Size(65, 23);
+            txtmeses.TabIndex = 14;
             // 
-            // lblmeses
+            // cboturno
             // 
-            lblmeses.AutoSize = true;
-            lblmeses.Location = new Point(8, 59);
-            lblmeses.Name = "lblmeses";
-            lblmeses.Size = new Size(40, 15);
-            lblmeses.TabIndex = 15;
-            lblmeses.Text = "Meses";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(54, 56);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(111, 23);
-            textBox1.TabIndex = 14;
+            cboturno.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboturno.FormattingEnabled = true;
+            cboturno.Items.AddRange(new object[] { "Mañana", "Tarde", "Noche" });
+            cboturno.Location = new Point(303, 21);
+            cboturno.Name = "cboturno";
+            cboturno.Size = new Size(121, 23);
+            cboturno.TabIndex = 18;
             // 
             // label1
             // 
@@ -248,63 +172,140 @@
             label1.TabIndex = 17;
             label1.Text = "Turno";
             // 
-            // comboBox5
+            // lblmeses
             // 
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Location = new Point(303, 21);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(121, 23);
-            comboBox5.TabIndex = 18;
+            lblmeses.AutoSize = true;
+            lblmeses.Location = new Point(8, 59);
+            lblmeses.Name = "lblmeses";
+            lblmeses.Size = new Size(40, 15);
+            lblmeses.TabIndex = 15;
+            lblmeses.Text = "Meses";
             // 
-            // Form1
+            // lblplan
+            // 
+            lblplan.AutoSize = true;
+            lblplan.Location = new Point(8, 24);
+            lblplan.Name = "lblplan";
+            lblplan.Size = new Size(30, 15);
+            lblplan.TabIndex = 14;
+            lblplan.Text = "Plan";
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(rbtefectivo);
+            groupBox2.Controls.Add(rbttarjeta);
+            groupBox2.Controls.Add(cbocuotas);
+            groupBox2.Controls.Add(label2);
+            groupBox2.Location = new Point(24, 246);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(465, 87);
+            groupBox2.TabIndex = 19;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Forma de Pago";
+            // 
+            // rbtefectivo
+            // 
+            rbtefectivo.AutoSize = true;
+            rbtefectivo.Location = new Point(8, 27);
+            rbtefectivo.Name = "rbtefectivo";
+            rbtefectivo.Size = new Size(67, 19);
+            rbtefectivo.TabIndex = 23;
+            rbtefectivo.TabStop = true;
+            rbtefectivo.Text = "Efectivo";
+            rbtefectivo.UseVisualStyleBackColor = true;
+            // 
+            // rbttarjeta
+            // 
+            rbttarjeta.AutoSize = true;
+            rbttarjeta.Location = new Point(166, 27);
+            rbttarjeta.Name = "rbttarjeta";
+            rbttarjeta.Size = new Size(60, 19);
+            rbttarjeta.TabIndex = 22;
+            rbttarjeta.TabStop = true;
+            rbttarjeta.Text = "Tarjeta";
+            rbttarjeta.UseVisualStyleBackColor = true;
+            // 
+            // cbocuotas
+            // 
+            cbocuotas.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbocuotas.FormattingEnabled = true;
+            cbocuotas.Items.AddRange(new object[] { "1", "3", "6" });
+            cbocuotas.Location = new Point(303, 26);
+            cbocuotas.Name = "cbocuotas";
+            cbocuotas.Size = new Size(121, 23);
+            cbocuotas.TabIndex = 18;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(253, 29);
+            label2.Name = "label2";
+            label2.Size = new Size(44, 15);
+            label2.TabIndex = 17;
+            label2.Text = "Cuotas";
+            // 
+            // btmcalcular
+            // 
+            btmcalcular.Location = new Point(322, 341);
+            btmcalcular.Name = "btmcalcular";
+            btmcalcular.Size = new Size(75, 23);
+            btmcalcular.TabIndex = 22;
+            btmcalcular.Text = "Calcular";
+            btmcalcular.UseVisualStyleBackColor = true;
+            // 
+            // btmLimpiar
+            // 
+            btmLimpiar.Location = new Point(414, 341);
+            btmLimpiar.Name = "btmLimpiar";
+            btmLimpiar.Size = new Size(75, 23);
+            btmLimpiar.TabIndex = 20;
+            btmLimpiar.Text = "Limpiar";
+            btmLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // FrmInscripcion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(comboBox4);
-            Controls.Add(checkBox2);
+            ClientSize = new Size(512, 376);
+            Controls.Add(btmcalcular);
+            Controls.Add(btmLimpiar);
+            Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(grpdatospersonales);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(comboBox3);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox2);
-            Name = "Form1";
-            Text = "Gimnasio";
+            Name = "FrmInscripcion";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = " ";
             grpdatospersonales.ResumeLayout(false);
             grpdatospersonales.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private TextBox txtxnombre;
-        private TextBox textBox2;
-        private CheckBox cb;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private CheckBox checkBox2;
+        private CheckBox chkestudiante;
+        private ComboBox cboplan;
         private TextBox txtedad;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private ComboBox comboBox3;
-        private Button button1;
-        private Button button2;
         private Label lblnombre;
         private GroupBox grpdatospersonales;
         private Label lbledad;
         private GroupBox groupBox1;
-        private TextBox textBox1;
         private Label lblmeses;
         private Label lblplan;
-        private ComboBox comboBox4;
-        private ComboBox comboBox5;
+        private ComboBox cboturno;
         private Label label1;
+        private GroupBox groupBox2;
+        private ComboBox cbocuotas;
+        private Label label2;
+        private TextBox txtmeses;
+        private Button btmcalcular;
+        private Button btmLimpiar;
+        private CheckBox chkcasillero;
+        private RadioButton rbtefectivo;
+        private RadioButton rbttarjeta;
     }
 }
