@@ -28,6 +28,7 @@ namespace pryViltaGimnasioSP2
         public FrmInscripcion()
         {
             InitializeComponent();
+
         }
 
         private void FrmInscripcion_Load(object sender, EventArgs e)
@@ -36,3 +37,7 @@ namespace pryViltaGimnasioSP2
         }
     }
 }
+
+
+
+
